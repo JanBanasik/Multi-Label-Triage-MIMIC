@@ -4,6 +4,11 @@ Research repository for **Intelligent Multi-Label Triage for Hematological Comor
 
 This repository is intended as a reproducible research artifact, not a clinical device. Outputs are for research review only and require independent clinical validation before any operational use.
 
+## Authors
+
+- Jan Banasik ([@JanBanasik](https://github.com/JanBanasik))
+- Antoni Pater ([@antoniopater](https://github.com/antoniopater))
+
 ## Repository layout
 
 - `notebooks_ethos/` - canonical notebook pipeline and small helper modules.

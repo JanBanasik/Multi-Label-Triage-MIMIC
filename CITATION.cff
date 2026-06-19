@@ -8,5 +8,6 @@ authors:
     given-names: "Jan"
 date-released: "2026-06-19"
 version: "0.1.0"
+repository-code: "https://github.com/JanBanasik/Multi-Label-Triage-MIMIC"
 type: software
 license: MIT
