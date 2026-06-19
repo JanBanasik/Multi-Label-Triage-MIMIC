@@ -1,9 +1,9 @@
 """
-Ścieżki dla notebooków 01–07. Uruchamiaj notebooki z katalogu notebooks_ethos (cwd = ten folder).
+Ścieżki dla notebooków 01–07. Uruchamiaj notebooki z katalogu notebooks (cwd = ten folder).
 """
 from pathlib import Path
 
-# Katalog roboczy = notebooks_ethos
+# Katalog roboczy = notebooks
 NOTEBOOKS_DIR = Path(__file__).resolve().parent
 
 # Dane przetworzone (output z 01, 02, 03, 05)

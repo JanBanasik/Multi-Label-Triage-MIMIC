@@ -11,9 +11,9 @@ This repository is intended as a reproducible research artifact, not a clinical 
 
 ## Repository layout
 
-- `notebooks_ethos/` - canonical notebook pipeline and small helper modules.
-- `notebooks_ethos/outputs/plots/` - lightweight paper figures kept in Git.
-- `notebooks_ethos/outputs/tables/` - lightweight paper tables kept in Git.
+- `notebooks/` - canonical notebook pipeline and small helper modules.
+- `notebooks/outputs/plots/` - lightweight paper figures kept in Git.
+- `notebooks/outputs/tables/` - lightweight paper tables kept in Git.
 - `data/questions.json` - adaptive interview question bank.
 - `data/lab_norms.json` - reference ranges used by the interview/tokenization flow.
 - `Banasik_Pater_Paper_2026.pdf` - final paper manuscript.
@@ -22,7 +22,7 @@ Generated corpora, MIMIC/Synthea extracts, MLflow state, trained models, and che
 
 ## Notebook workflow
 
-Run notebooks from the `notebooks_ethos/` directory, in order:
+Run notebooks from the `notebooks/` directory, in order:
 
 1. `00_Methodology.ipynb`
 2. `01_Preprocessing_Synthea.ipynb`
@@ -37,7 +37,7 @@ Run notebooks from the `notebooks_ethos/` directory, in order:
 11. `10_Baseline_Comparison.ipynb`
 12. `11_Ensemble_Model.ipynb` is experimental and should be treated as optional unless explicitly used for a new result table.
 
-The helper module `notebooks_ethos/paths_config.py` creates local generated directories under `notebooks_ethos/data/`, `notebooks_ethos/models/`, and `notebooks_ethos/outputs/`.
+The helper module `notebooks/paths_config.py` creates local generated directories under `notebooks/data/`, `notebooks/models/`, and `notebooks/outputs/`.
 
 ## Setup
 
@@ -60,7 +60,7 @@ The repository does not ship raw clinical data, generated corpora, or trained we
 - Synthea data can be regenerated locally. The script `data/generate.sh` documents the expected local Synthea generation flow.
 - Notebook outputs such as `corpus_train_*.txt`, `corpus_val_*.txt`, `medical_bert_mlm_*`, and `bert_triage_model_*` are generated locally and ignored by Git.
 
-The lightweight figures and tables needed to inspect the manuscript results are retained under `notebooks_ethos/outputs/`.
+The lightweight figures and tables needed to inspect the manuscript results are retained under `notebooks/outputs/`.
 
 ## Manuscript
 

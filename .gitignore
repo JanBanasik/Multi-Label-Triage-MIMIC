@@ -46,16 +46,16 @@ data/raw/
 data/interim/
 data/processed/
 data/synthetic/
-notebooks_ethos/data/
-notebooks_ethos/temp_chunks/
-notebooks_ethos/corpus_*.txt
-notebooks_ethos/*.txt
-!notebooks_ethos/README.md
+notebooks/data/
+notebooks/temp_chunks/
+notebooks/corpus_*.txt
+notebooks/*.txt
+!notebooks/README.md
 
 # Trained models and checkpoints
 models/
-notebooks_ethos/models/
-notebooks_ethos/bert_triage_model_*/
+notebooks/models/
+notebooks/bert_triage_model_*/
 *.safetensors
 *.pt
 *.pth

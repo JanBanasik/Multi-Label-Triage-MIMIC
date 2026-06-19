@@ -1,7 +1,7 @@
 """
 Save 4 figures for the paper: attention (with token labels) + output for 2 cases.
 Cases: (1) complex multi-label (5 referrals), (2) nephrology-only.
-Run from notebooks_ethos after notebook 06 cells 0, 1, 2, or: cd notebooks_ethos && python save_attention_three_figs.py
+Run from notebooks after notebook 06 cells 0, 1, 2, or: cd notebooks && python save_attention_three_figs.py
 """
 
 import numpy as np

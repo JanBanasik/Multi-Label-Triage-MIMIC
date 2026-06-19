@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Print dataset characteristics for the paper table (Table: Dataset characteristics).
-Run from notebooks_ethos: python dataset_table_values.py
+Run from notebooks: python dataset_table_values.py
 
 Uses: latest corpus_train_*.txt, corpus_val_*.txt (line counts = encounters),
       latest bert_triage_model_*/config.json (vocab_size),
@@ -12,7 +12,7 @@ Unique patients: not stored in corpus files (split is encounter-level); output N
 import sys
 from pathlib import Path
 
-# Run from notebooks_ethos
+# Run from notebooks
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
