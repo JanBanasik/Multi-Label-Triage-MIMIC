@@ -1,0 +1,136 @@
+{
+  "HGB": [
+    {
+      "comment": "Noworodki i niemowlęta (do 1 roku) - norma jest wysoka",
+      "max_age": 1,
+      "low": 10.0,
+      "high": 20.0,
+      "critical_low": 8.0, 
+      "critical_high": 23.0
+    },
+    {
+      "comment": "Dzieci (1-12 lat)",
+      "min_age": 1,
+      "max_age": 12,
+      "low": 10.5,
+      "high": 14.5,
+      "critical_low": 7.0, 
+      "critical_high": 18.0
+    },
+    {
+      "comment": "Kobiety dorosłe",
+      "sex": "F",
+      "min_age": 12,
+      "low": 12.0,
+      "high": 16.0,
+      "critical_low": 6.5, 
+      "critical_high": 18.0
+    },
+    {
+      "comment": "Mężczyźni dorośli",
+      "sex": "M",
+      "min_age": 12,
+      "low": 13.5,
+      "high": 17.5,
+      "critical_low": 7.0, 
+      "critical_high": 20.0
+    }
+  ],
+  "HCT": [
+    {
+      "comment": "Noworodki (Fizjologicznie wyższy hematokryt)",
+      "max_age": 1,
+      "low": 44.0, "high": 60.0,
+      "critical_low": 30.0, "critical_high": 70.0
+    },
+    {
+      "comment": "Dzieci (1-12 lat)",
+      "min_age": 1, "max_age": 12,
+      "low": 32.0, "high": 42.0,
+      "critical_low": 20.0, "critical_high": 55.0
+    },
+    {
+      "comment": "Kobiety dorosłe",
+      "sex": "F", "min_age": 12,
+      "low": 36.0, "high": 47.0,
+      "critical_low": 21.0, "critical_high": 60.0
+    },
+    {
+      "comment": "Mężczyźni dorośli",
+      "sex": "M", "min_age": 12,
+      "low": 40.0, "high": 52.0,
+      "critical_low": 21.0, "critical_high": 60.0
+    }
+  ],
+  "ALT": [
+    {
+      "comment": "Enzymy wątrobowe (Kluczowe dla pytań o alkohol/żółtaczkę)",
+      "low": 7.0, "high": 56.0,
+      "critical_high": 200.0
+    }
+  ],
+  "CREATININE": [
+    {
+      "comment": "Dzieci",
+      "max_age": 12,
+      "low": 0.2,
+      "high": 0.7,
+      "critical_high": 4.0
+    },
+    {
+      "comment": "Młodzież i Dorośli",
+      "min_age": 12,
+      "low": 0.5,
+      "high": 1.3,
+      "critical_high": 4.0
+    }
+  ],
+  "WBC": [
+    {
+      "comment": "Dzieci mają wyższe leukocyty",
+      "max_age": 10,
+      "low": 5.0,
+      "high": 15.0,
+      "critical_low": 1.5, "critical_high": 30.0
+    },
+    {
+      "comment": "Dorośli",
+      "min_age": 10,
+      "low": 4.0,
+      "high": 11.0,
+      "critical_low": 1.0, "critical_high": 30.0
+    }
+  ],
+  "PLT": [
+    {
+      "comment": "Standard dla wszystkich",
+      "low": 150,
+      "high": 450,
+      "critical_low": 30, "critical_high": 1000
+    }
+  ],
+  "MCV": [
+    {
+       "comment": "Standard",
+       "low": 80,
+       "high": 100,
+       "critical_low": 60, "critical_high": 120
+    }
+  ],
+  "UREA": [
+    {
+      "comment": "Norma (BUN) w mg/dL",
+      "low": 7.0,
+      "high": 20.0,
+      "critical_high": 80.0
+    }
+  ],
+  "EGFR": [
+    {
+      "comment": "Im mniej tym gorzej. Poniżej 60 to przewlekła choroba nerek.",
+      "low": 60.0,
+      "high": 999.0,
+      "critical_low": 15.0
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "kids": [
+    {
+      "trigger": "HGB_LOW",
+      "intent": "DIET_CHECK",
+      "text": "Czy dziecko jest niejadkiem / ma dietę ubogą w mięso?",
+      "snomed_code": "235595009", 
+      "comment": "Używamy GERD/Problemów trawiennych jako proxy dla problemów z jedzeniem, ew. brak kodu",
+      "token_yes": "HIST_POOR_DIET_YES", "token_no": "HIST_POOR_DIET_NO"
+    },
+    {
+      "trigger": "PLT_LOW",
+      "intent": "BRUISING_CHECK",
+      "text": "Czy u dziecka łatwo powstają siniaki?",
+      "snomed_code": "271737000",
+      "comment": "Proxy: Anemia (często powiązana) - jeśli brak kodu siniaków",
+      "token_yes": "SYMPTOM_EASY_BRUISING_YES", "token_no": "SYMPTOM_EASY_BRUISING_NO"
+    },
+    {
+      "trigger": "WBC_HIGH",
+      "intent": "VOMIT_CHECK",
+      "text": "Czy występują wymioty i ostry ból brzucha?",
+      "snomed_code": "74400008",
+      "comment": "Zapalenie wyrostka (Appendicitis) -> Objaw: Wymioty",
+      "token_yes": "SYMPTOM_VOMIT_YES", "token_no": "SYMPTOM_VOMIT_NO"
+    }
+  ],
+  "under_30": [
+    {
+      "trigger": "CREATININE_HIGH", "gender": "F",
+      "intent": "DYSURIA_CHECK",
+      "text": "Czy odczuwasz pieczenie podczas oddawania moczu?",
+      "snomed_code": "307426000",
+      "token_yes": "SYMPTOM_DYSURIA_YES", "token_no": "SYMPTOM_DYSURIA_NO"
+    },
+    {
+      "trigger": "CREATININE_HIGH",
+      "intent": "HEMATURIA_CHECK",
+      "text": "Czy zauważyłeś zmianę koloru moczu (czerwony/ciemny)?",
+      "snomed_code": "307426000", 
+      "comment": "ZMIANA: Używamy Cystitis (6000+ przypadków) również dla Krwiomoczu",
+      "token_yes": "SYMPTOM_HEMATURIA_YES", "token_no": "SYMPTOM_HEMATURIA_NO"
+    },
+    {
+      "trigger": "HGB_LOW", "gender": "F",
+      "intent": "HEAVY_PERIODS",
+      "text": "Czy masz obfite miesiączki?",
+      "snomed_code": "271737000",
+      "token_yes": "SYMPTOM_HEAVY_PERIODS_YES", "token_no": "SYMPTOM_HEAVY_PERIODS_NO"
+    },
+    {
+      "trigger": "ALT_HIGH",
+      "intent": "ALCOHOL_CHECK",
+      "text": "Czy spożywasz alkohol częściej niż raz w tygodniu (ryzyko stłuszczenia)?",
+      "snomed_code": "162864005",
+      "comment": "ZMIANA: Używamy Otyłości BMI 30+ jako proxy stylu życia/stłuszczenia wątroby",
+      "token_yes": "HIST_ALCOHOL_USE_YES", "token_no": "HIST_ALCOHOL_USE_NO"
+    }
+  ],
+  "under_60": [
+    {
+      "trigger": "HGB_LOW",
+      "intent": "GASTRITIS_CHECK",
+      "text": "Czy cierpisz na bóle brzucha lub zgagę?",
+      "snomed_code": "235595009",
+      "token_yes": "SYMPTOM_STOMACH_PAIN_YES", "token_no": "SYMPTOM_STOMACH_PAIN_NO"
+    },
+    {
+      "trigger": "HGB_LOW",
+      "intent": "GI_BLEED_CHECK",
+      "text": "Czy zauważyłeś krew w stolcu lub czarny stolec?",
+      "snomed_code": "235595009",
+      "token_yes": "SYMPTOM_GI_BLEED_YES", "token_no": "SYMPTOM_GI_BLEED_NO"
+    },
+    {
+      "trigger": "ALT_HIGH",
+      "intent": "JAUNDICE_CHECK",
+      "text": "Czy występuje zażółcenie skóry (problemy z pęcherzykiem)?",
+      "snomed_code": "65275009",
+      "comment": "ZMIANA: Acute Cholecystitis (z Twojej listy) zamiast rzadkiego WZW C",
+      "token_yes": "SYMPTOM_JAUNDICE_YES", "token_no": "SYMPTOM_JAUNDICE_NO"
+    },
+    {
+      "trigger": "CREATININE_HIGH",
+      "intent": "EDEMA_CHECK",
+      "text": "Czy masz obrzęki nóg lub twarzy?",
+      "snomed_code": "431855005",
+      "token_yes": "SYMPTOM_EDEMA_YES", "token_no": "SYMPTOM_EDEMA_NO"
+    }
+  ],
+  "seniors": [
+    {
+      "trigger": "HGB_LOW",
+      "intent": "GI_BLEED_CHECK",
+      "text": "Czy zauważyłeś czarny, smolisty stolec?",
+      "snomed_code": "235595009",
+      "comment": "GERD/Problemy GI (powtórzenie celowe dla seniorów)",
+      "token_yes": "SYMPTOM_GI_BLEED_YES", "token_no": "SYMPTOM_GI_BLEED_NO"
+    },
+    {
+      "trigger": "PLT_LOW",
+      "intent": "MEDS_CHECK",
+      "text": "Czy przyjmujesz leki rozrzedzające krew (np. Aspiryna)?",
+      "snomed_code": "414545008",
+      "comment": "Choroba wieńcowa (Ischemic Heart Disease) -> Wymaga leków rozrzedzających",
+      "token_yes": "HIST_BLOOD_THINNERS_YES", "token_no": "HIST_BLOOD_THINNERS_NO"
+    },
+    {
+      "trigger": "HGB_LOW",
+      "intent": "WEIGHT_LOSS_CHECK",
+      "text": "Czy nastąpiła niezamierzona utrata wagi?",
+      "snomed_code": "46177005",
+      "comment": "Schyłkowa niewydolność nerek (ESRD) -> Objaw: Wyniszczenie",
+      "token_yes": "SYMPTOM_WEIGHT_LOSS_YES", "token_no": "SYMPTOM_WEIGHT_LOSS_NO"
+    },
+    {
+      "trigger": "HGB_LOW",
+      "intent": "CHEST_PAIN_CHECK",
+      "text": "Czy odczuwasz ból w klatce piersiowej promieniujący do ręki?",
+      "snomed_code": "414545008",
+      "comment": "Choroba wieńcowa (Ischemic Heart Disease) -> Objaw: Ból dławicowy",
+      "token_yes": "SYMPTOM_CHEST_PAIN_YES", "token_no": "SYMPTOM_CHEST_PAIN_NO"
+    },
+    {
+      "trigger": "WBC_HIGH",
+      "intent": "DYSPNEA_CHECK",
+      "text": "Czy towarzyszy temu duszność?",
+      "snomed_code": "88805009",
+      "comment": "Niewydolność serca (CHF) -> Objaw: Duszność",
+      "token_yes": "SYMPTOM_DYSPNEA_YES", "token_no": "SYMPTOM_DYSPNEA_NO"
+    }
+  ]
+}

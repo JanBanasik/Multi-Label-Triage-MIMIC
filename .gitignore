@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments and local config
+.venv/
+venv/
+.env
+.python-version
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb_convert/
+.ipynb_hidden/
+
+# Tooling caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and local databases
+*.log
+*.duckdb
+*.db
+*.sqlite
+mlflow/
+.mlflow_orphan/
+
+# Generated data and corpora
+data/raw/
+data/interim/
+data/processed/
+data/synthetic/
+notebooks_ethos/data/
+notebooks_ethos/temp_chunks/
+notebooks_ethos/corpus_*.txt
+notebooks_ethos/*.txt
+!notebooks_ethos/README.md
+
+# Trained models and checkpoints
+models/
+notebooks_ethos/models/
+notebooks_ethos/bert_triage_model_*/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.onnx
+*.joblib
+
+# Large local exports
+*.pdf
+!Banasik_Pater_Paper_2026.pdf

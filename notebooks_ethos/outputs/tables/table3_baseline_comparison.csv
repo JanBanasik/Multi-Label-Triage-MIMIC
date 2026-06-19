@@ -1,0 +1,6 @@
+Model,Accuracy,Precision,Recall,F1
+Rule-based,0.239,0.194,0.239,0.155
+Random Forest,0.705,0.699,0.705,0.699
+Logistic Regression,0.666,0.659,0.666,0.661
+XGBoost,0.689,0.684,0.689,0.685
+BERT (proposed),0.655,0.688,0.655,0.661

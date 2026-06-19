@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper."
+title: "Intelligent Multi-Label Triage for Hematological Comorbidities using BERT"
+authors:
+  - family-names: "Pater"
+    given-names: "Antoni"
+  - family-names: "Banasik"
+    given-names: "Jan"
+date-released: "2026-06-19"
+version: "0.1.0"
+type: software
+license: MIT
