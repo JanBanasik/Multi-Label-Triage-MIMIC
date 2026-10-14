@@ -1,6 +1,6 @@
 # Intelligent Multi-Label Triage for Hematological Comorbidities using BERT
 
-**Best Paper Award — Young AI Track, PP-RAI 2026** · Research code · Python / PyTorch / Transformers
+**Best Paper Award — PP-RAI 2026** · Research code · Python / PyTorch / Transformers
 
 An open research implementation accompanying our study of **multi-label triage for hematological comorbidities**. We combine synthetic and credentialed clinical data, pre-train a BERT-style masked language model on structured medical tokens, and fine-tune a multi-label classifier.
 
@@ -26,7 +26,7 @@ The repository follows the research workflow used to produce the manuscript, not
 **Conference:** 7th Polish Conference on Artificial Intelligence (PP-RAI 2026)  
 **Recognition:** Best Paper Award — Young AI Track
 
-**Proceedings / DOI:** Publisher record and final citation will be linked here once officially confirmed. Until then, please do not cite this work as already published in Springer proceedings.
+**Research record:** [Zenodo archive](https://zenodo.org/records/18675510). This record is separate from any future Springer version of record and its publisher DOI.\n\n**Proceedings / DOI:** Publisher record and final citation will be linked here once officially confirmed. Until then, please do not cite this work as already published in Springer proceedings.
 
 The research manuscript is a **separate scholarly work** and is **not licensed under this repository's MIT software license**. Distribution of any manuscript version is subject to the applicable author–publisher agreement and self-archiving rules.
 
