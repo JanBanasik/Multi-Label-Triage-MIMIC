@@ -1,47 +1,49 @@
-# BloodAI Medical Research
+# Intelligent Multi-Label Triage for Hematological Comorbidities using BERT
 
-Research repository for **Intelligent Multi-Label Triage for Hematological Comorbidities using BERT**. The project contains the notebook workflow used to build a hybrid Synthea + MIMIC corpus, pre-train a BERT-style masked language model on medical tokens, fine-tune a multi-label triage classifier, and generate the evaluation figures used in the manuscript.
+**Best Paper Award — PP-RAI 2026** · Research code · Python / PyTorch / Transformers
 
-This repository is intended as a reproducible research artifact, not a clinical device. Outputs are for research review only and require independent clinical validation before any operational use.
+An open research implementation accompanying our study of **multi-label triage for hematological comorbidities**. We combine synthetic and credentialed clinical data, pre-train a BERT-style masked language model on structured medical tokens, and fine-tune a multi-label classifier.
 
-## Authors
+> **Research only.** This is not a clinical device or validated clinical decision-support system. Any real-world use would require independent clinical validation.
 
-- Jan Banasik ([@JanBanasik](https://github.com/JanBanasik))
-- Antoni Pater ([@antoniopater](https://github.com/antoniopater))
+## Research at a glance
 
-## Repository layout
+| Component | Approach |
+| --- | --- |
+| Research task | Predict multiple co-occurring hematological conditions rather than a single class |
+| Data | Synthea-generated synthetic records and credentialed MIMIC data |
+| Representation | Medical tokens derived from laboratory measurements and adaptive interview signals |
+| Modeling | Masked language model pre-training, followed by multi-label fine-tuning |
+| Evaluation | Baseline comparison, explainability, statistical analysis, and error analysis |
+| Reproducibility | Ordered notebooks, code, lightweight figures and result tables; no restricted patient data |
 
-- `notebooks/` - canonical notebook pipeline and small helper modules.
-- `notebooks/outputs/plots/` - lightweight paper figures kept in Git.
-- `notebooks/outputs/tables/` - lightweight paper tables kept in Git.
-- `data/questions.json` - adaptive interview question bank.
-- `data/lab_norms.json` - reference ranges used by the interview/tokenization flow.
-- `Banasik_Pater_Paper_2026.pdf` - final paper manuscript.
+The repository follows the research workflow used to produce the manuscript, not a deployable medical product.
 
-Generated corpora, MIMIC/Synthea extracts, MLflow state, trained models, and checkpoints are intentionally excluded from Git.
+## Publication and recognition
 
-## Notebook workflow
+**Paper:** *Intelligent Multi-Label Triage for Hematological Comorbidities using BERT*  
+**Authors:** Jan Banasik and Antoni Pater  
+**Conference:** 7th Polish Conference on Artificial Intelligence (PP-RAI 2026)  
+**Recognition:** Best Paper Award — Young AI Track
 
-Run notebooks from the `notebooks/` directory, in order:
+**Research record:** [Zenodo archive](https://zenodo.org/records/18675510). This record is separate from any future Springer version of record and its publisher DOI.\n\n**Proceedings / DOI:** Publisher record and final citation will be linked here once officially confirmed. Until then, please do not cite this work as already published in Springer proceedings.
 
-1. `00_Methodology.ipynb`
-2. `01_Preprocessing_Synthea.ipynb`
-3. `02_Preprocessing_MIMIC.ipynb`
-4. `03_Merge_Datasets.ipynb`
-5. `04_Train_MLM_Model.ipynb`
-6. `05_Fine_Tune_Model.ipynb`
-7. `06_Explainability.ipynb`
-8. `07_Advanced_Evaluation.ipynb`
-9. `08_Statistical_Analysis.ipynb`
-10. `09_Error_Analysis.ipynb`
-11. `10_Baseline_Comparison.ipynb`
-12. `11_Ensemble_Model.ipynb` is experimental and should be treated as optional unless explicitly used for a new result table.
+The research manuscript is a **separate scholarly work** and is **not licensed under this repository's MIT software license**. Distribution of any manuscript version is subject to the applicable author–publisher agreement and self-archiving rules.
 
-The helper module `notebooks/paths_config.py` creates local generated directories under `notebooks/data/`, `notebooks/models/`, and `notebooks/outputs/`.
+For the implementation, GitHub's **Cite this repository** feature reads [`CITATION.cff`](CITATION.cff).
 
-## Setup
+## Explore the research artifacts
 
-Python 3.10 or newer is required.
+- **[Figures](notebooks/outputs/plots/)** — visualizations retained for inspecting research results.
+- **[Result tables](notebooks/outputs/tables/)** — lightweight evaluation outputs retained in Git.
+- **[Notebooks](notebooks/)** — the experimental pipeline and analysis.
+- **[Citation metadata](CITATION.cff)** — software citation; publication metadata will be updated after verification.
+
+The numerical results should be read in the context of the reported data splits, baselines and study limitations; this README does not substitute for the full research methodology.
+
+## Reproduce the workflow
+
+Python **3.10+** is required.
 
 ```bash
 python3 -m venv .venv
@@ -50,26 +52,41 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-Alternatively, install from `pyproject.toml` with a compatible package manager.
+Run the notebooks from the `notebooks/` directory in the following order:
 
-## Data and model artifacts
+| Stage | Notebook |
+| --- | --- |
+| 00 · Methodology | `00_Methodology.ipynb` |
+| 01 · Synthetic data | `01_Preprocessing_Synthea.ipynb` |
+| 02 · Clinical data | `02_Preprocessing_MIMIC.ipynb` |
+| 03 · Merge | `03_Merge_Datasets.ipynb` |
+| 04 · Pre-training | `04_Train_MLM_Model.ipynb` |
+| 05 · Fine-tuning | `05_Fine_Tune_Model.ipynb` |
+| 06 · Explainability | `06_Explainability.ipynb` |
+| 07 · Evaluation | `07_Advanced_Evaluation.ipynb` |
+| 08 · Statistics | `08_Statistical_Analysis.ipynb` |
+| 09 · Error analysis | `09_Error_Analysis.ipynb` |
+| 10 · Baselines | `10_Baseline_Comparison.ipynb` |
 
-The repository does not ship raw clinical data, generated corpora, or trained weights.
+`11_Ensemble_Model.ipynb` is **experimental and optional**; it should not be taken as part of the core reported results without further verification.
 
-- MIMIC access must be handled through PhysioNet according to its credentialing and data use rules.
-- Synthea data can be regenerated locally. The script `data/generate.sh` documents the expected local Synthea generation flow.
-- Notebook outputs such as `corpus_train_*.txt`, `corpus_val_*.txt`, `medical_bert_mlm_*`, and `bert_triage_model_*` are generated locally and ignored by Git.
+The helper `notebooks/paths_config.py` initializes local generated directories under `notebooks/data/`, `notebooks/models/` and `notebooks/outputs/`.
 
-The lightweight figures and tables needed to inspect the manuscript results are retained under `notebooks/outputs/`.
+## Data access and responsible use
 
-## Manuscript
+Raw clinical data, generated corpora, trained models, checkpoints and MLflow state **are not distributed** by this repository.
 
-The final paper manuscript is included as `Banasik_Pater_Paper_2026.pdf`.
+- **MIMIC:** Obtain access independently through [PhysioNet](https://physionet.org/) and comply with the applicable data-use agreement. Do not commit or redistribute credentialed records.
+- **Synthea:** Generate synthetic records locally; see [`data/generate.sh`](data/generate.sh) for the expected workflow.
+- **Outputs:** The figures and tables committed here are lightweight research artifacts; recreating the complete experiments requires the appropriate data access and compute environment.
 
-## Citation
+## Authors
 
-Use `CITATION.cff` for citation metadata. The DOI/publication fields should be updated after the Springer publication is assigned.
+- [Jan Banasik](https://github.com/JanBanasik)
+- [Antoni Pater](https://github.com/antoniopater)
 
-## License
+## License and publication rights
 
-Code and repository materials are released under the MIT License unless a file states otherwise. Third-party datasets remain governed by their original licenses and access terms.
+The repository's [MIT License](LICENSE) applies to the **source code and associated software documentation**. It does **not** license the manuscript PDF, Springer-published material, restricted datasets, or third-party content. These materials remain subject to their respective rights and terms.
+
+The code and research outputs are provided **as-is for academic investigation** and are not validated for clinical use.

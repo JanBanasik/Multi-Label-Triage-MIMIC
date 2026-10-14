@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the associated paper."
+message: "If you use this software, please cite this repository. Paper citation metadata will be added after official publication."
 title: "Intelligent Multi-Label Triage for Hematological Comorbidities using BERT"
 authors:
   - family-names: "Pater"
