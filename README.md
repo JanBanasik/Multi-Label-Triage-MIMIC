@@ -64,11 +64,11 @@ The lightweight figures and tables needed to inspect the manuscript results are 
 
 ## Manuscript
 
-The final paper manuscript is included as `Banasik_Pater_Paper_2026.pdf`.
+The paper manuscript is included as `Banasik_Pater_Paper_2026.pdf`. The open-access preprint (Zenodo v2) is available at **[DOI: 10.5281/zenodo.18675510](https://doi.org/10.5281/zenodo.18675510)**.
 
 ## Citation
 
-Use `CITATION.cff` for citation metadata. The DOI/publication fields should be updated after the Springer publication is assigned.
+Use [`CITATION.cff`](CITATION.cff) for citation metadata. Its preferred citation points to the Zenodo preprint; replace it with the publisher's record if and when a Springer version is published with its own DOI.
 
 ## License
 
