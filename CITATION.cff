@@ -11,3 +11,14 @@ version: "0.1.0"
 repository-code: "https://github.com/JanBanasik/Multi-Label-Triage-MIMIC"
 type: software
 license: MIT
+preferred-citation:
+  type: article
+  title: "Intelligent Multi-Label Triage for Hematological Comorbidities using BERT"
+  authors:
+    - family-names: "Banasik"
+      given-names: "Jan"
+    - family-names: "Pater"
+      given-names: "Antoni"
+  year: 2026
+  doi: 10.5281/zenodo.18675510
+  url: "https://doi.org/10.5281/zenodo.18675510"
